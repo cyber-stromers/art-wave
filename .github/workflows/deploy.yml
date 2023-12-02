@@ -24,5 +24,3 @@ jobs:
           npm install
           npm run dev
 
-      - name: Display URL
-        run: echo "Open the following URL: http://localhost:3000/"
