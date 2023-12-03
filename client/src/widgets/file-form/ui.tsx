@@ -4,8 +4,6 @@ import { Flex, Img, Spinner, Button } from '@chakra-ui/react';
 import { Dropzone } from '@/features/dropzone';
 import { encodeImageToBase64 } from './utils';
 import { Api } from '@/shared/api';
-//@ts-ignore
-import { triggerBase64Download } from 'react-base64-downloader';
 
 interface Props {
   error: string | null;
@@ -30,7 +28,7 @@ export const FileForm = memo(({ error, isLoading, setError, setIsLoading, image,
     console.log(encodedImage, file, image);
     setIsLoading(true);
     Api.post('/api/v1/super_resolution', { image: encodedImage || image, resolution: 16 }).then(res => {
-      triggerBase64Download(res.data, 'image');
+      // triggerBase64Download(res.data, 'image');
       setEncodedImage(res.data);
     });
   };

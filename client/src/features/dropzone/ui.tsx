@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react';
-import { Flex, Text, Button } from '@chakra-ui/react';
+import { Flex, Button } from '@chakra-ui/react';
 import { useDropzone } from 'react-dropzone';
 
 interface Props {
